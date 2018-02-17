@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<garou>
+	<nombre>qwer</nombre>
+	<jugador>asdf</jugador>
+	<cronica>zxcv</cronica>
+	<raza id="2">Metis</raza>
+	<auspicio id="2">Theurge</auspicio>
+	<tribu id="6">Fianna</tribu>
+	<manada>tyi</manada>
+	<totem>ghjk</totem>
+	<concepto>bnmv</concepto>
+	<naturaleza id="6">Crítico</naturaleza>
+	<conducta id="4">Confabulador</conducta>
+	<atributos>
+		<fisicos tipo="1">
+			<fuerza>4</fuerza>
+			<destreza>2</destreza>
+			<resistencia>4</resistencia>
+		</fisicos>
+		<sociales tipo="2">
+			<carisma>3</carisma>
+			<manipulacion>2</manipulacion>
+			<apariencia>3</apariencia>
+		</sociales>
+		<mentales tipo="3">
+			<percepcion>1</percepcion>
+			<inteligencia>2</inteligencia>
+			<astucia>3</astucia>
+		</mentales>
+	</atributos>
+	<habilidades>
+		<talentos tipo="1">
+			<alerta>3</alerta>
+			<atletismo>3</atletismo>
+			<callejeo>3</callejeo>
+			<empatia>0</empatia>
+			<esquivar>0</esquivar>
+			<expresion>3</expresion>
+			<impulsoPrimario>1</impulsoPrimario>
+			<intimidacion>0</intimidacion>
+			<pelea>0</pelea>
+			<subterfugio>0</subterfugio>
+		</talentos>
+		<tecnicas tipo="2">
+			<armasCC>3</armasCC>
+			<armasFuego>0</armasFuego>
+			<conducir>3</conducir>
+			<etiqueta>0</etiqueta>
+			<interpretacion>0</interpretacion>
+			<liderazgo>3</liderazgo>
+			<reparaciones>0</reparaciones>
+			<sigilo>0</sigilo>
+			<supervivencia>0</supervivencia>
+			<tratoAnimales>0</tratoAnimales>
+		</tecnicas>
+		<conocimientos tipo="3">
+			<ciencias>3</ciencias>
+			<enigmas>0</enigmas>
+			<informatica>0</informatica>
+			<investigacion>0</investigacion>
+			<leyes>0</leyes>
+			<linguistica>0</linguistica>
+			<medicina>2</medicina>
+			<ocultismo>0</ocultismo>
+			<politica>0</politica>
+			<rituales>0</rituales>
+		</conocimientos>
+	</habilidades>
+	<trasfondos>
+		<trasfondo id="6">
+			<nombre>Pura Raza</nombre>
+			<valor>3</valor>
+		</trasfondo>
+		<trasfondo id="10">
+			<nombre>Vida Pasada</nombre>
+			<valor>1</valor>
+		</trasfondo>
+		<trasfondo id="5">
+			<nombre>Mentor</nombre>
+			<valor>1</valor>
+		</trasfondo>
+	</trasfondos>
+	<dones>
+		<don id="68">
+			<nombre>Crear Elemento</nombre>
+			<camino>1</camino>
+			<rango>1</rango>
+		</don>
+		<don id="281">
+			<nombre>Roce materno</nombre>
+			<camino>2</camino>
+			<rango>1</rango>
+		</don>
+		<don id="202">
+			<nombre>Luz feérica</nombre>
+			<camino>3</camino>
+			<rango>1</rango>
+		</don>
+	</dones>
+	<rangoGarou id="1">Cliath</rangoGarou>
+	<renombre>
+		<gloria>0</gloria>
+		<honor>0</honor>
+		<sabiduria>3</sabiduria>
+	</renombre>
+	<rabia>2</rabia>
+	<gnosis>3</gnosis>
+	<fuerzaVoluntad>3</fuerzaVoluntad>
+</garou>

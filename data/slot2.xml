@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<garou>
+	<nombre>qwer</nombre>
+	<jugador>asdf</jugador>
+	<cronica>zxcv</cronica>
+	<raza id="1">Homínido</raza>
+	<auspicio id="3">Philodox</auspicio>
+	<tribu id="1">Camada de Fenris</tribu>
+	<manada>erty</manada>
+	<totem>dfgh</totem>
+	<concepto>cvnn</concepto>
+	<naturaleza id="2">Bravucón</naturaleza>
+	<conducta id="3">Bufón</conducta>
+	<atributos>
+		<fisicos tipo="0">
+			<fuerza>2</fuerza>
+			<destreza>4</destreza>
+			<resistencia>2</resistencia>
+		</fisicos>
+		<sociales tipo="0">
+			<carisma>4</carisma>
+			<manipulacion>2</manipulacion>
+			<apariencia>4</apariencia>
+		</sociales>
+		<mentales tipo="0">
+			<percepcion>5</percepcion>
+			<inteligencia>5</inteligencia>
+			<astucia>3</astucia>
+		</mentales>
+	</atributos>
+	<habilidades>
+		<talentos tipo="0">
+			<alerta>1</alerta>
+			<atletismo>0</atletismo>
+			<callejeo>0</callejeo>
+			<empatia>0</empatia>
+			<esquivar>4</esquivar>
+			<expresion>0</expresion>
+			<impulsoPrimario>0</impulsoPrimario>
+			<intimidacion>0</intimidacion>
+			<pelea>0</pelea>
+			<subterfugio>2</subterfugio>
+		</talentos>
+		<tecnicas tipo="0">
+			<armasCC>0</armasCC>
+			<armasFuego>0</armasFuego>
+			<conducir>2</conducir>
+			<etiqueta>0</etiqueta>
+			<interpretacion>0</interpretacion>
+			<liderazgo>0</liderazgo>
+			<reparaciones>4</reparaciones>
+			<sigilo>0</sigilo>
+			<supervivencia>0</supervivencia>
+			<tratoAnimales>3</tratoAnimales>
+		</tecnicas>
+		<conocimientos tipo="0">
+			<ciencias>0</ciencias>
+			<enigmas>0</enigmas>
+			<informatica>1</informatica>
+			<investigacion>1</investigacion>
+			<leyes>1</leyes>
+			<linguistica>1</linguistica>
+			<medicina>0</medicina>
+			<ocultismo>0</ocultismo>
+			<politica>0</politica>
+			<rituales>0</rituales>
+		</conocimientos>
+	</habilidades>	
+	<trasfondos>
+		<trasfondo id="2">
+			<nombre>Contactos</nombre>
+			<valor>2</valor>
+		</trasfondo>
+		<trasfondo id="3">
+			<nombre>Fetiche</nombre>
+			<valor>3</valor>
+		</trasfondo>
+	</trasfondos>
+	<dones>
+		<don id="67">
+			<nombre>Correr por la nieve</nombre>
+			<camino>0</camino>
+			<rango>7</rango>
+		</don>
+		<don id="133">
+			<nombre>Garras como cuchillos</nombre>
+			<camino>0</camino>
+			<rango>7</rango>
+		</don>
+	</dones>
+	<rangoGarou id="1">Cliath</rangoGarou>
+	<renombre>
+		<gloria>3</gloria>
+		<honor>2</honor>
+		<sabiduria>1</sabiduria>
+	</renombre>
+	<rabia>3</rabia>
+	<gnosis>4</gnosis>
+	<fuerzaVoluntad>7</fuerzaVoluntad>
+</garou>

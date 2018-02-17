@@ -1,0 +1,41 @@
+#p_plantilla, #p_cargar, #p_guardar, #p_ayuda, #areaImpresion{
+	display:none;
+}
+
+.btn_boton{
+	background-color: #FFFFFF;
+    border: 0px;
+    cursor: pointer;
+	margin: 0px 4px 0px 0px;
+    padding: 0px;
+}
+
+.btn_barra{
+	width: 25px;
+	height: 25px;
+}
+
+.btn_nuevo{
+	width: 90px;
+	height: 90px;
+}
+
+#validacion{
+	color:red;
+}
+
+.optionSelected{
+	color: red;
+}
+
+.optionDonAjeno{
+	color: red;
+}
+
+.btn_random{
+	cursor: pointer;
+}
+
+.btn_random_sel{
+	border: red dotted 2px;
+}

@@ -1,0 +1,499 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Plantilla HL</title>
+		<link href='plantilla.css' rel='stylesheet' type='text/css'></script>
+		<script src="equals.js" language="JavaScript"> </script>
+		<script src="general.js" language="JavaScript"> </script>
+		<script src="xmlParser.js" language="JavaScript"> </script>
+		<script src="enumerated.js" language="JavaScript"> </script>
+		<script src="clases.js" language="JavaScript"> </script>
+		<script src="validacion.js" language="JavaScript"> </script>
+		<script src="funciones.js" language="JavaScript"> </script>
+		<script src="aleatorio.js" language="JavaScript"> </script>
+	</head>
+	<body onload="init();">
+		<div id="barraHerramientas">
+			<table>
+				<tr>
+					<td>
+						<span class="btn_boton" onclick="ventanaGarou(false);" title="Volver a la plantilla"><img class="btn_barra" src="img/plantilla.png"></span>
+						<span class="btn_boton" onclick="ventanaNuevoGarou();" title="Nuevo garou"><img class="btn_barra" src="img/nuevo.png"></span>
+						<span class="btn_boton" onclick="ventanaCargar();" title="Cargar garou"><img class="btn_barra" src="img/cargar.png"></span>
+						<span class="btn_boton" onclick="ventanaGuardar();" title="Guardar garou"><img class="btn_barra" src="img/guardar.png"></span>
+						<span class="btn_boton" onclick="global.slotSelected=1;imprimir();" title="Imprimir garou"><img class="btn_barra" src="img/imprimir.png"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="p_nuevo">
+			<table>
+				<tr>
+					<td>
+						<hr/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="btn_boton" onclick="nuevoGarouFree();" title="Modo libre"><img class="btn_nuevo" src="img/libre.png"></span>
+						<span class="btn_boton" onclick="nuevoGarouGuiado();" title="Guiado"><img class="btn_nuevo" src="img/guiado.png"></span>
+						<span class="btn_boton" onclick="ventanaNuevoGarouRandom();" title="Aleatorio"><img class="btn_nuevo" src="img/dados.jpg"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="p_seleccionAleatoria">
+							<table>
+								<tr>
+									<td colspan="14">
+										<hr/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="14">Seleccionar Raza</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="btn_random" src="img/human.gif" tipo="raza" title="Homínido" onclick="btnRandomRaza(this, TRaza.HOMINIDO);">
+									</td>
+									<td>
+										<img class="btn_random" src="img/metis.gif" tipo="raza" onclick="btnRandomRaza(this, TRaza.METIS);" title="Metis">
+									</td>
+									<td>
+										<img class="btn_random" src="img/wolf.gif" tipo="raza" onclick="btnRandomRaza(this, TRaza.LUPUS);" title="Lupus">
+									</td>
+									<td colspan="11"></td>
+								</tr>
+								<tr>
+									<td colspan="14">
+										<hr/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="14">Seleccionar Auspicio</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="btn_random" src="img/ragabash.gif" tipo="auspicio" onclick="btnRandomAuspicio(this, TAuspicio.RAGABASH);" title="Ragabash">
+									</td>
+									<td>
+										<img class="btn_random" src="img/theurge.gif" tipo="auspicio" onclick="btnRandomAuspicio(this, TAuspicio.THEURGE);" title="Theurge">
+									</td>
+									<td>
+										<img class="btn_random" src="img/philodox.gif" tipo="auspicio" onclick="btnRandomAuspicio(this, TAuspicio.PHILODOX);" title="Philodox">
+									</td>
+									<td>
+										<img class="btn_random" src="img/galliard.gif" tipo="auspicio" onclick="btnRandomAuspicio(this, TAuspicio.GALLIARD);" title="Galliard">
+									</td>
+									<td>
+										<img class="btn_random" src="img/ahroun.gif" tipo="auspicio" onclick="btnRandomAuspicio(this, TAuspicio.AHROUN);" title="Ahroun">
+									</td>
+									<td colspan="9"></td>
+								</tr>
+								<tr>
+									<td colspan="14">
+										<hr/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="14">Seleccionar Tribu</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="btn_random" src="img/camadaFenris.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.CAMADA);" title="Camada de fenris">
+									</td>
+									<td>
+										<img class="btn_random" src="img/caminantesSilenciosos.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.CAMINANTE);" title="Caminante Silencioso">
+									</td>
+									<td>
+										<img class="btn_random" src="img/colmillosPlateados.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.COLMILLO);" title="Colmillo Plateado">
+									</td>
+									<td>
+										<img class="btn_random" src="img/contemplaestrellas.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.CONTEMPLAESTRELLAS);" title="Contemplaestrellas">
+									</td>
+									<td>
+										<img class="btn_random" src="img/danzantes.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.DANZANTE);" title="Danzante de la Espiral Negra">
+									</td>
+									<td>
+										<img class="btn_random" src="img/fianna.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.FIANNA);" title="Fianna">
+									</td>
+									<td>
+										<img class="btn_random" src="img/furiaNegra.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.FURIANEGRA);" title="Furia Negra">
+									</td>
+									<td>
+										<img class="btn_random" src="img/garraRoja.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.GARRAROJA);" title="Garra Roja">
+									</td>
+									<td>
+										<img class="btn_random" src="img/hijosGaia.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.HIJOGAIA);" title="Hijo de Gaia">
+									</td>
+									<td>
+										<img class="btn_random" src="img/moradoresCristal.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.MORADOR);" title="Morador del Cristal">
+									</td>
+									<td>
+										<img class="btn_random" src="img/roehuesos.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.ROEHUESOS);" title="Roehuesos">
+									</td>
+									<td>
+										<img class="btn_random" src="img/senoresSombra.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.SENORSOMBRAS);" title="Señor de las Sombras">
+									</td>
+									<td>
+										<img class="btn_random" src="img/uktena.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.UKTENA);" title="Uktena">
+									</td>
+									<td>
+										<img class="btn_random" src="img/wendigo.gif" tipo="tribu" onclick="btnRandomTribu(this, TTribu.WENDIGO);" title="Wendigo">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="14">
+										<hr/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="14">Seleccionar Rango</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="btn_random" src="img/cachorro.gif" tipo="rango" onclick="btnRandomRango(this, TRango.CACHORRO);" title="Cachorro">
+									</td>
+									<td>
+										<img class="btn_random" src="img/cliath.png" tipo="rango" onclick="btnRandomRango(this, TRango.CLIATH);" title="Cliath">
+									</td>
+									<td>
+										<img class="btn_random" src="img/fostern.png" tipo="rango" onclick="btnRandomRango(this, TRango.FOSTERN);" title="Fostern">
+									</td>
+									<td>
+										<img class="btn_random" src="img/adren.png" tipo="rango" onclick="btnRandomRango(this, TRango.ADREN);" title="Adren">
+									</td>
+									<td>
+										<img class="btn_random" src="img/athro.png" tipo="rango" onclick="btnRandomRango(this, TRango.ATHRO);" title="Athro">
+									</td>
+									<td>
+										<img class="btn_random" src="img/elder.png" tipo="rango" onclick="btnRandomRango(this, TRango.ELDER);" title="Elder">
+									</td>
+									<td>
+										<img class="btn_random" src="img/sexto.gif" tipo="rango" onclick="btnRandomRango(this, TRango.SEXTO);" title="Leyenda">
+									</td>
+									<td colspan="7"></td>
+								</tr>
+								<tr>
+									<td colspan="14">
+										<hr/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="btn_boton" onclick="nuevoGarouRandom();" title="Aleatorio"><img class="btn_nuevo" src="img/dados2.jpg">
+									</td>
+									<td colspan="13"></td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="p_guardar">
+			<table>
+				<tr>
+					<td id="td_guardar">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="Guardar Slot" onclick="guardarDatos(false);"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="p_cargar">
+			<table>
+				<tr>
+					<td id="td_cargar">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="Cargar Slot" onclick="cargarDatos();"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="p_plantilla">
+			<table id="tabla_plantilla">
+				<tr>
+					<td colspan="4">PLANTILLA</td>
+					<td>
+						<table id="btn_plantilla">
+							<tr>
+								<td>
+									<span id="btn_plantilla_anterior" class="btn_boton" onclick="anterior();" title="Anterior"><img class="btn_barra" src="img/anterior.png"></span>
+								</td>
+								<td>
+									<span id="btn_plantilla_texto"></span>
+								</td>
+								<td>
+									<span id="btn_plantilla_siguiente" class="btn_boton" onclick="siguiente();" title="Anterior"><img class="btn_barra" src="img/siguiente.png"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<span id="btn_free" class="btn_boton" onclick="free();" title="Activar modo libre"><img class="btn_barra" src="img/plantilla.png"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td>Nombre</td>
+					<td><input type="text" id="nombre" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+					<td>Raza</td>
+					<td id="td_raza"></td>
+					<td>Manada</td>
+					<td><input type="text" id="manada" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+				</tr>
+				<tr>
+					<td>Jugador</td>
+					<td><input type="text" id="jugador" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+					<td>Auspicio</td>
+					<td id="td_auspicio"></td>
+					<td>Tótem</td>
+					<td><input type="text" id="totem" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+				</tr>
+				<tr>
+					<td>Crónica</td>
+					<td><input type="text" id="cronica" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+					<td>Tribu</td>
+					<td id="td_tribu"></td>
+					<td>Concepto</td>
+					<td><input type="text" id="concepto" desactivable="1" onchange="asignarValorPlano(this);"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Naturaleza</td>
+					<td id="td_naturaleza"></td>
+					<td>Conducta</td>
+					<td id="td_conducta"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6">ATRIBUTOS</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td>Físicos</td>
+					<td id="td_atribFisicos"></td>
+					<td>Sociales</td>
+					<td id="td_atribSociales"></td>
+					<td>Mentales</td>
+					<td id="td_atribMentales"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td>Fuerza</td>
+					<td id="td_fuerza"></td>
+					<td>Carisma</td>
+					<td id="td_carisma"></td>
+					<td>Percepción</td>
+					<td id="td_percepcion"></td>
+				</tr>
+				<tr>
+					<td>Destreza</td>
+					<td id="td_destreza"></td>
+					<td>Manipulación</td>
+					<td id="td_manipulacion"></td>
+					<td>Inteligencia</td>
+					<td id="td_inteligencia"></td>
+				</tr>
+				<tr>
+					<td>Resistencia</td>
+					<td id="td_resistencia"></td>
+					<td>Apariencia</td>
+					<td id="td_apariencia"></td>
+					<td>Astucia</td>
+					<td id="td_astucia"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6">HABILIDADES</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td>Talentos</td>
+					<td id="td_habTalentos"></td>
+					<td>Técnicas</td>
+					<td id="td_habTecnicas"></td>
+					<td>Conocimientos</td>
+					<td id="td_habConocimientos"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td>Alerta</td>
+					<td id="td_alerta"></td>
+					<td>Armas C.C.</td>
+					<td id="td_armasCC"></td>
+					<td>Ciencias</td>
+					<td id="td_ciencias"></td>
+				</tr>
+				<tr>
+					<td>Atletismo</td>
+					<td id="td_atletismo"></td>
+					<td>Armas de Fuego</td>
+					<td id="td_armasFuego"></td>
+					<td>Enigmas</td>
+					<td id="td_enigmas"></td>
+				</tr>
+				<tr>
+					<td>Callejeo</td>
+					<td id="td_callejeo"></td>
+					<td>Conducir</td>
+					<td id="td_conducir"></td>
+					<td>Informática</td>
+					<td id="td_informatica"></td>
+				</tr>			
+				<tr>
+					<td>Empatía</td>
+					<td id="td_empatia"></td>
+					<td>Etiqueta</td>
+					<td id="td_etiqueta"></td>
+					<td>Investigación</td>
+					<td id="td_investigacion"></td>
+				</tr>
+				<tr>
+					<td>Esquivar</td>
+					<td id="td_esquivar"></td>
+					<td>Interpretación</td>
+					<td id="td_interpretacion"></td>
+					<td>Leyes</td>
+					<td id="td_leyes"></td>
+				</tr>
+				<tr>
+					<td>Expresión</td>
+					<td id="td_expresion"></td>
+					<td>Liderazgo</td>
+					<td id="td_liderazgo"></td>
+					<td>Lingüística</td>
+					<td id="td_linguistica"></td>
+				</tr>
+				<tr>
+					<td>Impulso Primario</td>
+					<td id="td_impulsoPrimario"></td>
+					<td>Reparaciones</td>
+					<td id="td_reparaciones"></td>
+					<td>Medicina</td>
+					<td id="td_medicina"></td>
+				</tr>
+				<tr>
+					<td>Intimidación</td>
+					<td id="td_intimidacion"></td>
+					<td>Sigilo</td>
+					<td id="td_sigilo"></td>
+					<td>Ocultismo</td>
+					<td id="td_ocultismo"></td>
+				</tr>
+				<tr>
+					<td>Pelea</td>
+					<td id="td_pelea"></td>
+					<td>Supervivencia</td>
+					<td id="td_supervivencia"></td>
+					<td>Política</td>
+					<td id="td_politica"></td>
+				</tr>
+				<tr>
+					<td>Subterfugio</td>
+					<td id="td_subterfugio"></td>
+					<td>Trato con Animales</td>
+					<td id="td_tratoAnimales"></td>
+					<td>Rituales</td>
+					<td id="td_rituales"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6">VENTAJAS</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="2">Trasfondos</td>
+					<td colspan="4">Dones</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td id="td_trasfondos" colspan="2"></td>
+					<td id="td_dones" colspan="4"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6">TOQUES FINALES</td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="3">Renombre</td>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><hr></td>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td>Gloria</td>
+					<td id="td_gloria" colspan="2"></td>
+					<td>Rabia</td>
+					<td id="td_rabia" colspan="2"></td>
+				</tr>
+				<tr>
+					<td>Honor</td>
+					<td id="td_honor" colspan="2"></td>
+					<td>Gnosis</td>
+					<td id="td_gnosis" colspan="2"></td>
+				</tr>
+				<tr>
+					<td>Sabiduría</td>
+					<td id="td_sabiduria" colspan="2"></td>
+					<td>Fuerza de Voluntad</td>
+					<td id="td_fuerzaVoluntad" colspan="2"></td>
+				</tr>
+				<tr>
+					<td>Rango</td>
+					<td id="td_rango"></td>
+					<td colspan="4"></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="6">Validación</td>
+				</tr>
+				<tr>
+					<td id="validacion" colspan="6"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="areaImpresion"></div>
+	</body>
+</html>
