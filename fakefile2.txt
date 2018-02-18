@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+Metemos texto fake y cambiamos el fichero en local
+=======
+Metemos texto fake y cambiamos el fichero en remoto
+>>>>>>> bccf055b988a9af462b3e89808ee2ac0972488fb
+
+Y así nos lo deja
