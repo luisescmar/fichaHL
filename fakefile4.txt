@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-﻿fakefile para subida múltiple tortoise #2 editado en local
-=======
-fakefile para subida múltiple tortoise #2 updated en remoto
->>>>>>> 5cb17c8225678678452bb79a9ec71a402580abd6
